@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Test app</title>
+    </head>
+    <body>
+        <div id="app">
+          <div>First div</div>
+          <button onclick="clicker()">clicker</button>
+          <button onclick="addElement()">Add click</button>
+          <button onclick="removeElement()">Remove element</button>
+        </div>
+        <!-- Main -->
+        <script>
+            function addName(event) {
+                    const name = event.target.value
+                    const div = document.createElement('div')
+                    div.className = "name"
+                    const nameLength = document.querySelectorAll('.name')
+                    
+                    div.innerText = "Name : " + name
+                    document.body.appendChild(div)
+                }
+
+            function removeElement() {
+                const spans = document.getElementsByTagName('span')
+
+            
+                
+            }
+            function addElement() {
+                const input1 = document.createElement('input')
+                const input2 = document.createElement('input')
+                input1.placeholder = "name"
+                input1.addEventListener('change', addName)
+
+                input2.placeholder = 'second name'
+
+                const inputlenght = document.getElementsByTagName('input').length
+                if(inputlenght >=2) {
+                    return
+                }
+                
+                document.body.appendChild(input1);
+                document.body.appendChild(input2);
+            }
+        
+        function clicker () {
+            console.log('click')
+        }
+        
+        
+        </script>
+    </body>
+</html>

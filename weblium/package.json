@@ -1,0 +1,19 @@
+{
+  "name": "weblium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "a.js",
+  "scripts": {
+    "wd:update": "webdriver-manager update --standalone --chrome",
+    "wd:start": "webdriver-manager start",
+    "test": "mocha --timeout 25000 ./tests/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "wd-interface": "0.0.4",
+    "webdriver-manager": "^12.0.6"
+  }
+}
